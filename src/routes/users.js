@@ -1,11 +1,11 @@
 const router = require('express').Router();
 
-router.get('/signin', (req, res) => {
-    res.send('Entering to the app.');
+router.get('/users/signin', (req, res) => {
+    res.render('users/signin');
 });
 
-router.get('/signup', (req, res) => {
-    res.send('Authentication Form');
+router.get('/users/signup', (req, res) => {
+    res.render('users/signup');
 });
 
 module.exports = router;
