@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/apno-app', {
+const dbName = 'notapp';
+
+mongoose.connect('mongodb://localhost/'+dbName, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false
