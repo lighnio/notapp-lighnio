@@ -1,1 +1,32 @@
-<h1>SignIn</h1>
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div class="card mt-4 text-center">
+      <div class="header">
+        <h1>Account Login</h1>
+      </div>
+      <i class="fas fa-users"></i>
+      <div class="card-body">
+        <form action="/users/signin" method="POST">
+          <div class="form-group"><input
+              type="email"
+              name="email"
+              placeholder="Email"
+              autofocus
+              class="form-control my-2"
+            /></div>
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              class="form-control my-2"
+            />
+          </div>
+          <div class="form-group d-grid gap-2">
+            <button type="submit" class="btn btn-primary">SignIn</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

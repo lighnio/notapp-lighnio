@@ -1,0 +1,22 @@
+{{#if error_passport}}
+  <div class="col-md-8 mx-auto alert alert-danger alert-dismissible fade show" role="alert">
+   {{error_passport}}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+{{/if}}
+{{#each errors}}
+  <div class="col-md-10 mx-auto alert alert-danger alert-dismissible fade show" role="alert">
+   {{text}}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+{{/each}}

@@ -57,7 +57,7 @@ router.get("/notes/edit/:id", async (req, res) => {
     title: note.title,
     description: note.description
   }
-  console.log(data);
+  // console.log(data);
   res.render("notes/edit-note", { data: data });
 });
 
