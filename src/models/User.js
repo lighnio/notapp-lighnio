@@ -11,14 +11,12 @@ const UserSchema = new Schema({
 });
 
 UserSchema.methods.encryptPassword = async(pass) => {
-    console.log('MSG FROM USER SCHEMA');
     const salt = await bcrypt.genSalt(10);
     const hash = bcrypt.hash(pass, salt);
     return hash;
 }
 
 UserSchema.methods.matchPassword = async function(pass) {
-    console.log('MSG FROM USER SCHEMA');
     return await bcrypt.compare(pass, this.password)
 }
 

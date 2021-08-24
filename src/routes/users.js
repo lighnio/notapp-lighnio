@@ -1,8 +1,7 @@
 const router = require("express").Router();
-
 const User = require('../models/User');
-
 const passport = require('passport')
+const { isAuthenticated } = require('../helpers/auth');
 
 router.get("/users/signin", (req, res) => {
   res.render("users/signin");
@@ -51,6 +50,11 @@ router.post("/users/signup", async (req, res) => {
     req.flash('success_msg', 'Registered');
     res.redirect('/users/signin');
   }
+});
+
+router.get('/users/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');  
 });
 
 module.exports = router;
