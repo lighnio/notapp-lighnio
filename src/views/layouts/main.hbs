@@ -11,9 +11,11 @@
   </head>
   <body>
 
-    {{> navigation}}
+    <div class="my-custom-navigation mb-4">
+      {{> navigation}}
+    </div>
 
-    <main class="container">
+    <main class="container my-custom-content">
       {{> messages }}
       {{> errors }}
       
@@ -22,7 +24,10 @@
       
     </main>
 
-    <p>Footer</p>
+    <div class="my-custom-footer">  
+      {{> footer}}
+    </div>
+
     <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -40,7 +40,6 @@ router.get("/notes", isAuthenticated, async (req, res) => {
           };
         }),
       };
-      // console.log(context.notes);
       res.render("notes/all-notes", { notes: context.notes });
     });
 });
@@ -52,7 +51,6 @@ router.get("/notes/edit/:id", isAuthenticated, async (req, res) => {
     title: note.title,
     description: note.description
   }
-  // console.log(data);
   res.render("notes/edit-note", { data: data });
 });
 

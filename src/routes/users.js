@@ -20,7 +20,6 @@ router.get("/users/signup", (req, res) => {
 router.post("/users/signup", async (req, res) => {
   const errors = [];
   const { name, email, password, confirm_password } = req.body;
-    // console.log(req.body);
   if ((!name, !email, !password)) {
     errors.push({ text: "Fields not be empty." });
   } else {
@@ -29,7 +28,6 @@ router.post("/users/signup", async (req, res) => {
     if (password !== confirm_password) errors.push({text: 'Passwords not match.'});
         else if (password.length < 4) errors.push({text: 'Password must be at least 4 characters.'});
   }
-  console.log(errors);
   if (errors.length > 0) {
     res.render("users/signup", {
       errors,

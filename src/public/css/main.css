@@ -15,3 +15,15 @@ body {
     #701f39
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.my-custom-navigation{
+  height: 10%;
+}
+
+.my-custom-content{
+  height: 74%;
+}
+
+.my-custom-footer{
+  height: 10%;
+}

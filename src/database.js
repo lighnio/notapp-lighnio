@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const dbName = 'notapp';
+const connectionString = 'mongodb+srv://defaultuser:default@cluster0.gmiuk.mongodb.net/notapp?retryWrites=true&w=majority';
 
-mongoose.connect('mongodb://localhost/'+dbName, {
+mongoose.connect(connectionString, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false
